@@ -2,9 +2,13 @@
 #include <fstream>
 #include <limits>
 #include <vector>
+#include <string>
+
+#define FILE_PATH "day_1.txt"
+
 
 int part1() {
-    std::ifstream infile("input.txt");
+    std::ifstream infile(FILE_PATH);
     int curr = std::numeric_limits<int>::max();
     int prev = 0;
     int res = 0;
@@ -21,7 +25,7 @@ int part1() {
 }
 
 int part2() {
-    std::ifstream infile("input.txt");
+    std::ifstream infile(FILE_PATH);
     std::vector<int> sums;
     int x, y, z;
     infile >> x >> y >> z;
